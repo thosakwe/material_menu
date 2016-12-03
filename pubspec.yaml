@@ -1,0 +1,12 @@
+author: "Tobe O <thosakwe@gmail.com>"
+description: "Material menu for Angular2."
+homepage: "https://github.com/thosakwe/material_menu"
+name: "material_menu"
+version: "1.0.0-dev"
+dependencies: 
+  angular: "^1.1.2+2"
+  angular2_components: "^0.2.1"
+dev_dependencies: 
+  browser: "^0.10.0+2"
+transformers:
+- angular2
