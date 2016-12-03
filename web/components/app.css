@@ -1,0 +1,11 @@
+#content {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+
+#content > .container {
+    align-items: center;
+    flex: 1;
+    margin-right: 1em;
+}

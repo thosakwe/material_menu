@@ -1,0 +1,6 @@
+<div id="main" (click)="handleClick($event)" [class.disabled]="disabled" [class.selected]="selected" role="button">
+    <material-ripple *ngIf="!disabled"></material-ripple>
+    <img *ngIf="avatar != null && avatar.isNotEmpty" src="{{avatar}}" alt="{{alt}}" avatar>
+    <glyph *ngIf="icon != null && icon.isNotEmpty" [icon]="icon"></glyph>
+    <ng-content></ng-content>
+</div>
