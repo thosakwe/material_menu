@@ -28,8 +28,17 @@
     cursor: default;
 }
 
+#main.large {
+    font-size: 24px;
+    min-height: 72px;
+}
+
 #main.selected {
     font-weight: bold;
+}
+
+#main.separated {
+    border-bottom: 1px solid rgb(224, 224, 224);
 }
 
 #main:not(.disabled):hover {
@@ -44,4 +53,9 @@ img[avatar] {
     border-radius: 50%;
     width: 32px;
     height: 32px;
+}
+
+img.large[avatar] {
+    width: 64px;
+    height: 64px;
 }
