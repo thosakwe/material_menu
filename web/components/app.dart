@@ -11,4 +11,8 @@ import 'package:material_toolbar/material_toolbar.dart';
   menuDirectives,
   MaterialToolbarComponent
 ])
-class AppComponent {}
+class AppComponent {
+  final List<String> items = [
+    'Auto', 'Separate', 'Items'
+  ];
+}

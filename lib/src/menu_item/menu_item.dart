@@ -19,11 +19,17 @@ class MenuItemComponent {
   String icon;
 
   @Input()
+  bool large = false;
+
+  @Input()
   bool selected = false;
+
+  @Input()
+  bool separated = false;
 
   @Output()
   final EventEmitter<Event> click = new EventEmitter<Event>();
-  
+
   void handleClick(Event $event) {
     if (!disabled) {
       click.add($event);

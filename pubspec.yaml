@@ -2,7 +2,7 @@ author: "Tobe O <thosakwe@gmail.com>"
 description: "Material menu for Angular2."
 homepage: "https://github.com/thosakwe/material_menu"
 name: "material_menu"
-version: "1.0.0"
+version: "1.0.0+1"
 dependencies: 
   angular2: "^2.2.0"
   angular2_components: "^0.2.1"

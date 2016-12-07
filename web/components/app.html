@@ -29,3 +29,26 @@
     </material-menu>
   </div>
 </div>
+<div class="content padded">
+  <div class="container">
+    <material-menu>
+      <menu-item *ngFor="let item of items; let index = index;" [separated]="index < items.length - 1">
+        {{ item }}
+      </menu-item>
+    </material-menu>
+  </div>
+</div>
+<br>
+<div class="content padded">
+  <h3>Large Items</h3>
+  <br>
+  <div class="container">
+    <material-menu>
+      <menu-item *ngFor="let item of items; let index = index;"
+        avatar="https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg"
+        [large]="true" [separated]="index < items.length - 1">
+        Large {{ item }}
+      </menu-item>
+    </material-menu>
+  </div>
+</div>
