@@ -1,0 +1,86 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "2": [
+          "Component"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular_components/angular_components.dart",
+        "2": [
+          "materialDirectives"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:material_menu/material_menu.dart",
+        "5": false
+      },
+      {
+        "1": "package:material_toolbar/material_toolbar.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "AppComponent",
+        "7": [
+          {
+            "2": "materialDirectives"
+          },
+          {
+            "2": "menuDirectives"
+          },
+          {
+            "2": "MaterialToolbarComponent"
+          }
+        ]
+      }
+    ],
+    "6": "app.dart"
+  },
+  "type": {
+    "AppComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "example-app",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "AppComponent",
+        "moduleUrl": "asset:material_menu/web/components/app.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 0,
+        "template": "<material-toolbar icon=\"menu\" title=\"Menu Example\"></material-toolbar>\n<div id=\"content\">\n  <div class=\"container\">\n    <material-menu>\n      <menu-item avatar=\"https://avatars2.githubusercontent.com/u/9996860?v=3&s=460\">\n        Tobe O\n      </menu-item>\n      <menu-item [disabled]=\"true\" icon=\"favorite\">\n        My Likes\n      </menu-item>\n      <menu-item href=\"https://dartlang.org\" avatar=\"https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg\">\n        <div class=\"link content\">\n          Dart (link)\n        </div>\n      </menu-item>\n    </material-menu>\n  </div>\n  <div class=\"container\">\n    <material-menu>\n      <menu-item icon=\"content_cut\">\n        Items\n      </menu-item>\n      <menu-separator></menu-separator>\n      <menu-item icon=\"content_copy\">\n        Can be\n      </menu-item>\n      <menu-separator></menu-separator>\n      <menu-item icon=\"content_paste\">\n        Separated\n      </menu-item>\n    </material-menu>\n  </div>\n</div>\n<div class=\"content padded\">\n  <div class=\"container\">\n    <material-menu>\n      <menu-item *ngFor=\"let item of items; let index = index;\" [separated]=\"index < items.length - 1\">\n        {{ item }}\n      </menu-item>\n    </material-menu>\n  </div>\n</div>\n<div class=\"content padded\">\n  <div class=\"container\">\n    <material-menu>\n      <menu-item [separated]=\"true\" href=\"https://dartlang.org\" avatar=\"https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg\">\n        <div class=\"link content\">\n          Dart (link)\n        </div>\n      </menu-item>\n      <menu-item href=\"https://dartlang.org\" avatar=\"https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg\">\n        <div class=\"link content\">\n          Dart (link)\n        </div>\n      </menu-item>\n    </material-menu>\n  </div>\n</div>\n<br>\n<div class=\"content padded\">\n  <h3>Large Items</h3>\n  <br>\n  <div class=\"container\">\n    <material-menu>\n      <menu-item *ngFor=\"let item of items; let index = index;\" avatar=\"https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg\"\n        [large]=\"true\" [separated]=\"index < items.length - 1\">\n        Large {{ item }}\n      </menu-item>\n    </material-menu>\n  </div>\n</div>\n<div class=\"content padded\">\n  <div class=\"container\">\n    <material-menu>\n      <menu-item [large]=\"true\" [separated]=\"true\" href=\"https://dartlang.org\" avatar=\"https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg\">\n        <div class=\"link content\">\n          Dart (link)\n        </div>\n      </menu-item>\n      <menu-item [large]=\"true\" href=\"https://dartlang.org\" avatar=\"https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg\">\n        <div class=\"link content\">\n          Dart (link)\n        </div>\n      </menu-item>\n    </material-menu>\n  </div>\n</div>",
+        "templateUrl": "asset:material_menu/web/components/app.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:material_menu/web/components/app.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}
