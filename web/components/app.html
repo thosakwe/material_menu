@@ -8,8 +8,10 @@
       <menu-item [disabled]="true" icon="favorite">
         My Likes
       </menu-item>
-      <menu-item avatar="https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg">
-        Dart
+      <menu-item href="https://dartlang.org" avatar="https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg">
+        <div class="link content">
+          Dart (link)
+        </div>
       </menu-item>
     </material-menu>
   </div>
@@ -38,16 +40,47 @@
     </material-menu>
   </div>
 </div>
+<div class="content padded">
+  <div class="container">
+    <material-menu>
+      <menu-item [separated]="true" href="https://dartlang.org" avatar="https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg">
+        <div class="link content">
+          Dart (link)
+        </div>
+      </menu-item>
+      <menu-item href="https://dartlang.org" avatar="https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg">
+        <div class="link content">
+          Dart (link)
+        </div>
+      </menu-item>
+    </material-menu>
+  </div>
+</div>
 <br>
 <div class="content padded">
   <h3>Large Items</h3>
   <br>
   <div class="container">
     <material-menu>
-      <menu-item *ngFor="let item of items; let index = index;"
-        avatar="https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg"
+      <menu-item *ngFor="let item of items; let index = index;" avatar="https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg"
         [large]="true" [separated]="index < items.length - 1">
         Large {{ item }}
+      </menu-item>
+    </material-menu>
+  </div>
+</div>
+<div class="content padded">
+  <div class="container">
+    <material-menu>
+      <menu-item [large]="true" [separated]="true" href="https://dartlang.org" avatar="https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg">
+        <div class="link content">
+          Dart (link)
+        </div>
+      </menu-item>
+      <menu-item [large]="true" href="https://dartlang.org" avatar="https://www.dartlang.org/assets/logo-61576b6c2423c80422c986036ead4a7fc64c70edd7639c6171eba19e992c87d9.svg">
+        <div class="link content">
+          Dart (link)
+        </div>
       </menu-item>
     </material-menu>
   </div>

@@ -1,16 +1,18 @@
+import 'dart:async';
 import 'dart:html' show Event;
-import 'package:angular2/core.dart' show Component, EventEmitter, Input, Output;
-import 'package:angular2_components/angular2_components.dart'
+import 'package:angular2/core.dart' show Component, Input, OnDestroy, Output;
+import 'package:angular_components/angular_components.dart'
     show GlyphComponent, MaterialRippleComponent;
+import 'package:angular_components/src/utils/async/src/lazy_stream_controller.dart';
 
 @Component(
     selector: 'menu-item',
     templateUrl: 'menu_item.html',
     styleUrls: const ['menu_item.css'],
     directives: const [GlyphComponent, MaterialRippleComponent])
-class MenuItemComponent {
+class MenuItemComponent implements OnDestroy {
   @Input()
-  String avatar, alt;
+  String avatar, alt, href;
 
   @Input()
   bool disabled = false;
@@ -27,12 +29,20 @@ class MenuItemComponent {
   @Input()
   bool separated = false;
 
+  final StreamController<Event> _click =
+      new LazyStreamController<Event>.broadcast();
+
   @Output()
-  final EventEmitter<Event> click = new EventEmitter<Event>();
+  Stream<Event> get click => _click.stream;
 
   void handleClick(Event $event) {
     if (!disabled) {
-      click.add($event);
+      _click.add($event);
     }
+  }
+
+  @override
+  ngOnDestroy() {
+    _click.close();
   }
 }

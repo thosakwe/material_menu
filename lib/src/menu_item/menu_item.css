@@ -1,4 +1,4 @@
-#main {
+.main {
     position: relative;
     min-height: 48px;
     padding: 0px 16px;
@@ -23,25 +23,25 @@
     cursor: pointer;
 }
 
-#main.disabled {
+.main.disabled {
     color: rgba(0, 0, 0, 0.298039);
     cursor: default;
 }
 
-#main.large {
+.main.large {
     font-size: 24px;
     min-height: 72px;
 }
 
-#main.selected {
+.main.selected {
     font-weight: bold;
 }
 
-#main.separated {
+.main.separated {
     border-bottom: 1px solid rgb(224, 224, 224);
 }
 
-#main:not(.disabled):hover {
+.main:not(.disabled):hover {
     background-color: #f7f7f7;
 }
 
