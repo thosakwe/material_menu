@@ -59,3 +59,8 @@ img.large[avatar] {
     width: 64px;
     height: 64px;
 }
+
+a.main {
+    text-decoration: none;
+    color: initial;
+}
